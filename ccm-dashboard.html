@@ -2,22 +2,6 @@
 All styles, HTML, and scripts for RepairDocs
 Loaded into index.html panel via fetch()
 
-ИСПРАВЛЕНИЯ В ЭТОЙ ВЕРСИИ:
-1. Все CSS-правила отскоуплены через #ccm-panel — раньше .p-inputtext / .p-button / .content /
-   :root уходили в глобальный <head> и перекрывали стили PrimeNG и AdminLTE во всём Angular-приложении.
-2. Убраны глобальные правила для html/body (overflow-y: auto конфликтовал с overflow-y: hidden
-   в основном index.html).
-3. Добавлена ОТСУТСТВОВАВШАЯ разметка правого сайдбара (#custom-right-sidebar, #sidebar-shadow,
-   #sidebar-panel-title, #sidebar-dynamic-content-area, #close-sidebar-x-btn) — именно из-за
-   её отсутствия кнопки Create/Edit ничего не открывали.
-4. В форму Create добавлено поле #form-notes (раньше отсутствовало -> .trim() на undefined ->
-   ошибка при сохранении).
-5. В форму Edit добавлено поле #form-groups (та же причина ошибки при сохранении).
-6. Исправлена незакрытая обёртка .form-group вокруг Part Number в форме Edit.
-7. Список типов контрактов в форме Create теперь генерируется из CONTRACT_TYPES вместо
-   отдельного захардкоженного списка — раньше третий пункт отличался текстом ("(selected products)")
-   и при редактировании ранее сохранённое действие для него не подставлялось.
--->
 
 <style>
 
